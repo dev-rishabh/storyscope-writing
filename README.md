@@ -30,43 +30,47 @@ It won't put a flashback in your password-reset email.
 
 ## Before and after
 
-You've received this email. Probably this week.
+You've received this email. Probably this week. The facts are in there, under the filler.
 
 > **Subject:** Update on Infrastructure Cost Optimization Initiative
 >
 > Hi team,
 >
-> I hope this email finds you well! I wanted to reach out regarding our ongoing efforts to streamline our cloud infrastructure costs. As you know, cost optimization plays a crucial role in ensuring the long-term sustainability of our operations.
+> I hope this email finds you well! I wanted to reach out regarding our ongoing efforts to streamline our cloud infrastructure costs. As you know, cost optimization plays a crucial role in ensuring the long-term health of our operations.
 >
-> Over the past few weeks, we have leveraged a comprehensive, holistic approach to identify key areas of inefficiency. Our analysis revealed significant opportunities for savings across multiple services, particularly in compute and storage. We have already implemented several robust measures, and early results are promising.
+> Over the past few weeks, we have leveraged a comprehensive, holistic approach to identify key areas of inefficiency. Our analysis revealed that roughly 40% of our compute spend was going to development servers that were left running overnight and on weekends, and that we were storing over 18 TB of old log files in standard storage. We have implemented several robust measures, including automated shutdown schedules for development servers and moving older logs to cheaper archive storage. Early results are promising, with our monthly bill coming down from around $21,000 to approximately $14,500.
 >
-> Next steps will involve further refinement of our strategy. It is important to note that some decisions are still pending, and we will keep you updated as things progress.
+> It is important to note that some decisions are still pending. In particular, Priya is looking into whether we should purchase reserved instances for the production database, and we would need a decision on that by Friday 14 November.
 >
 > Ultimately, this initiative demonstrates our commitment to operational excellence and responsible resource management.
 >
 > Let me know if you have any questions!
+>
+> Best,
+> Sam
 
 Here is what the skill handed back, unedited:
 
-> **Subject:** Cloud cost cuts: [$X/month] saved so far, [N] decisions open
+> **Subject:** Cloud bill down from $21,000 to about $14,500 a month; reserved-instance decision due Friday 14 November
 >
 > Hi team,
 >
-> Since [start date], the cost work has cut our cloud bill by about [$X/month], mostly in compute and storage.
+> Our monthly cloud bill has dropped from around $21,000 to about $14,500.
 >
-> What's live:
-> 1. [Change, e.g. "Rightsized 14 m5.2xlarge instances in prod to m5.xlarge"]: [$ saved/month]
-> 2. [Change, e.g. "Moved logs older than 90 days to Glacier"]: [$ saved/month]
+> Most of the savings came from two problems we found. About 40% of our compute spend was going to development servers left running overnight and at weekends, so those now shut down automatically on a schedule. We were also keeping more than 18 TB of old log files in standard storage, and we've moved the older ones to cheaper archive storage.
 >
-> Still open:
-> - [Decision]: [owner], by [date]
-> - [Decision]: [owner], by [date]
+> Open: should we buy reserved instances for the production database? Priya is looking into it, and we need a decision by Friday 14 November.
 >
-> I'll send the next update on [date]. If you own one of the open items, please reply by [date] with [what you need from them].
+> Best,
+> Sam
 
-Look at the brackets. The original had no numbers in it, so there was nothing true to put there, and the skill refused to invent any. That refusal is rule C2 doing its job, and it's the part I'd trust least to a model left alone.
+Same facts. The number moved from the middle of paragraph two to the subject line, and the one thing anyone has to *do* got its own line.
 
-It also explained itself, one line per change: the preamble went (C7), "some decisions are still pending" became named items with owners (C5), and the closing line about operational excellence was cut as "the moral of the email" (C1).
+Then it added this, which nobody asked for:
+
+> **The date is off.** In 2026, 14 November is a Saturday. Friday is 13 November. I left the date as you wrote it, so please confirm which day you mean.
+
+I wrote that sample email myself and didn't notice. It also pointed out that the original never says who actually makes the reserved-instance call, and that "past few weeks" had been dropped because there was no real date range to replace it with. It won't invent one.
 
 ## Install
 
