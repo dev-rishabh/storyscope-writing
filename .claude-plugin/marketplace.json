@@ -1,0 +1,15 @@
+{
+  "name": "storyscope-writing",
+  "description": "Write prose that does not carry the narrative fingerprints of AI text, based on the StoryScope study (arXiv 2604.03136).",
+  "owner": {
+    "name": "Rishabh Dev",
+    "url": "https://github.com/dev-rishabh"
+  },
+  "plugins": [
+    {
+      "name": "storyscope-writing",
+      "source": "./",
+      "description": "Drafts and audits any writing (emails, docs, READMEs, posts, fiction) against the 30 core and 26 Claude-specific narrative tells measured in StoryScope, with a separate mode for work and technical writing."
+    }
+  ]
+}

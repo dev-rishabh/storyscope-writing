@@ -1,0 +1,13 @@
+{
+  "name": "storyscope-writing",
+  "description": "Drafts and audits any writing against the narrative fingerprints of AI text measured in StoryScope (Russell et al., COLM 2026).",
+  "version": "1.1.0",
+  "author": {
+    "name": "Rishabh Dev",
+    "url": "https://github.com/dev-rishabh"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/dev-rishabh/storyscope-writing",
+  "repository": "https://github.com/dev-rishabh/storyscope-writing",
+  "keywords": ["writing", "style", "fiction", "ai-detection", "storyscope", "skill"]
+}
